@@ -24,12 +24,12 @@ iNcreept is a web-based, anti-compression steganography suite. Traditional image
 
 2. **Install the required dependencies:**
    ```bash
-   pip install -r (requirements.txt)
+   pip install -r ('requirements.txt')
    ```
 
 3. **Run the application:**
    ```bash
-   streamlit run iNcreept.py(camel case iNcreept)
+   streamlit run iNcreept.py(`Camel case`)
    ```
 
 4. **Access the web app:** 
