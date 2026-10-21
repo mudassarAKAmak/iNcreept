@@ -1,0 +1,36 @@
+Project Title: iNcreept - Anti-Compression Steganography Suite
+
+1. Abstract
+Data hiding (steganography) is a crucial aspect of covert digital communication. However, most traditional Least Significant Bit (LSB) steganography tools fail in real-world scenarios because messaging platforms (e.g., WhatsApp, Instagram) automatically compress uploaded images, destroying the hidden payload. iNcreept is a web-based steganography suite that solves this problem by using cryptographic key streams (SHA-256) and multi-format container wrappers (.PDF, .DOC) to bypass platform compression algorithms entirely.
+
+2. Problem Statement
+When standard LSB images are shared via social media, lossy compression (such as JPEG quantization) alters pixel values, permanently corrupting the hidden data. Senders need a way to transmit steganographic payloads across standard communication channels without the platform destroying the secret message.
+
+3. Solution & Key Features
+iNcreept provides a comprehensive, client friendly solution with the following features:
+* Anti-Compression Wrappers: Packages the lossless image into .PDF or .DOC containers. Messaging platforms treat these as documents rather than media files, preserving the exact pixel data.
+* Cryptographic Authentication: Implements a SHA-256 hashing algorithm to generate a unique keystream for XOR encryption. It includes an 8-character verification tag to ensure instant rejection of incorrect passwords.
+* Multi-Format Extraction: The decryption engine automatically parses raw images, HTML image tags inside DOC files, and End-Of-File (EOF) backup trailers to locate the hidden data.
+* Retro UI: A clean, distraction-free CRT-style terminal interface built with Streamlit and custom CSS.
+
+4. Technologies Used
+* Python: Core programming language.
+* Streamlit: Used for rapid frontend development and state management.
+* Pillow (PIL): For pixel-level image manipulation and conversion.
+* Hashlib & Base64: Standard Python libraries utilized for securing and encoding the payload before embedding.
+
+5. System Architecture & Workflow
+* Encoding Phase: 
+  1. The user uploads a cover image and enters a secret message and passkey.
+  2. The passkey is hashed via SHA-256 to create an authentication signature and encryption keystream.
+  3. The secret message is encrypted via XOR and converted to Base64.
+  4. The binary representation is embedded into the RGB channels (Least Significant Bits) of the image.
+  5. The image is packaged into the user's requested format and downloaded.
+* Decoding Phase:
+  1. The receiver uploads the file (PNG, JPG, PDF, or DOC).
+  2. The system scans the file for EOF trailers or raw LSB pixel data.
+  3. The extracted payload's signature is verified against the receiver's provided passkey.
+  4. If authenticated, the message is decrypted and displayed on the screen.
+
+6. Conclusion
+iNcreept successfully demonstrates how to combine digital media forensics (steganography) with application security (cryptography) to overcome modern data transmission obstacles. The project serves as a functional, real-world tool for secure communication, highlighting core cybersecurity concepts such as data integrity, confidentiality, and platform-specific evasion techniques.
