@@ -19,21 +19,21 @@ iNcreept is a web-based, anti-compression steganography suite. Traditional image
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/mudassarAKAmak/iNcreept
-   cd increept
+   cd iNcreept
    ```
 
 2. **Install the required dependencies:**
    ```bash
-   pip install -r requirements.txt
+   pip install -r (requirements.txt)
    ```
 
 3. **Run the application:**
    ```bash
-   streamlit run app.py
+   streamlit run iNcreept.py(camel case iNcreept)
    ```
 
 4. **Access the web app:** 
-   Open your browser and navigate to `http://localhost:8501`.
+   Open your browser and navigate to `http://localhost:85xx`.
 
 ## 🔑 Key Information
 * **Sender:** Uploads an image, types a secret message, sets a passkey, and downloads a protected container file.
