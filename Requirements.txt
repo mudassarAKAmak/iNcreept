@@ -1,0 +1,10 @@
+             				Requirements:
+
+
+Language:** Python 3.9 or newer (Built-in libraries used for hashlib, Base64, I/o, and regular expression(re).
+
+*Frontend/Web Framework: Streamlit (v1.32.0 or newer).
+
+*Image Processing:Pillow (PIL) (v10.2.0 or newer).
+
+*Cryptography: Custom XOR Cipher with SHA-256 (via Python's built-in hashlib)
