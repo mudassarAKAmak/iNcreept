@@ -18,7 +18,7 @@ iNcreept is a web-based, anti-compression steganography suite. Traditional image
 
 1. **Clone the repository:**
    ```bash
-   git clone <your-github-repo-link>
+   git clone https://github.com/mudassarAKAmak/iNcreept
    cd increept
    ```
 
